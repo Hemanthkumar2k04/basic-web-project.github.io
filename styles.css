@@ -54,7 +54,8 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; 
+    width: 100%;
 }
 .container button{
     margin-top: 30px;
@@ -100,4 +101,21 @@ button:active {
 .interest:hover{
     transform: scale(1.05);
     cursor: pointer;
+}
+.games,
+.tech,
+.movies,
+.podcasts
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    text-align: justify;
+    margin: auto;
 }
