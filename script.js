@@ -3,9 +3,9 @@ document.getElementById('loginForm').addEventListener('submit', function (event)
     var username = document.getElementById('username').value;
     var password = document.getElementById('password').value;
 
-    if (username === "Hemanth" && password === "HK") {
+    if (username === "admin" && password === "1234") {
         window.location.href = 'about.html'; 
-    } else {
+    } else  {
         alert("Incorrect Credentials");
     }
-});
+}); 
