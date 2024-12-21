@@ -9,7 +9,6 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 4rem;
-    min-width: 50px;
     margin: 0;
 }
 
@@ -23,6 +22,7 @@ footer {
     padding: 50px;
     text-align: center;
 }
+
 button {
     padding: 10px;
     font-family: inherit;
@@ -30,10 +30,11 @@ button {
     width: 250px;
     background-color: rgb(255, 239, 213);
     border-radius: 15px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.24), 0 17px 50px rgba(0, 0, 0, 0.19);
     cursor: pointer;
 }
 
@@ -44,44 +45,52 @@ button:active {
 #name {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 2rem;
-    position: relative;
     margin-left: 90%;
     font-weight: 100;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column; 
     width: 100%;
 }
-.container button{
+
+.container button {
     margin-top: 30px;
 }
-.container .box{
+
+.container .box {
     display: flex;
     margin: 20px auto;
     justify-content: space-around;
     align-items: flex-start;
     width: 100%;
-    margin: 20px auto;
     gap: 30px;
     box-sizing: border-box;
 }
-.container .box .interest{
+
+.container .box .interest {
     flex: 1 1 22%;
     max-width: 30%;
     min-width: 200px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-style: solid;
+    border: 1px solid black;
     border-radius: 15px;
     padding: 5px;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
-.container .box .interest img{
+
+.container .box .interest:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.container .box .interest img {
     width: 100%;
     object-fit: cover;
     height: auto;
@@ -89,53 +98,44 @@ button:active {
     border-radius: 15px;
     margin-bottom: 20px;
 }
+
 .container .box .interest p {
     font-size: 1rem;
     margin: 10px 0;
     color: white;
 }
-.interest{
-    transition: transform 0.3s ease;
-}
-.interest:hover{
-    transform: scale(1.05);
-    cursor: pointer;
-}
 
 .tech,
 .movies,
-.podcasts
-{
+.podcasts {
     position: relative;
     display: flex;
     flex-direction: column;
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
+    border: 2px solid black;
     padding: 20px;
     width: 80%;
     box-sizing: border-box;
     text-align: justify;
     margin: auto;
 }
-.container .gamebox{
+
+.container .gamebox {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 600px;
     padding: 20px;
-    margin: 10px 10px;
-    border-style: solid;
-    vertical-align: middle;
-    max-height: min-content;
+    margin: 10px auto;
+    border: 1px solid black;
+    box-sizing: border-box;
 }
-.container .gamebox img{
+
+.container .gamebox img {
     max-height: 150px;
 }
-.container .gamebox p{
-    position: relative;
+
+.container .gamebox p {
     font-weight: 100;
     font-size: larger;
-    vertical-align:middle;
 }
